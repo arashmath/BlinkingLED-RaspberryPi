@@ -1,3 +1,6 @@
+#Reference: https://www.raspinews.com/blinking-led-on-raspberry-pi-using-python/
+# Edited by: ArashMath
+
 import RPi.GPIO as GPIO
 import time
 
@@ -11,9 +14,9 @@ def setup():
 def blink():
 	while True:
 		GPIO.output(LedPin, GPIO.HIGH)
-		time.sleep(0.5)
+		time.sleep(0.5) #The number in this parentheses, shows the time LED is ON (in seconds)
 		GPIO.output(LedPin, GPIO.LOW)
-		time.sleep(0.5)
+		time.sleep(0.5) #The number in this parentheses, shows the time LED is OFF (in seconds)
 
 def destroy():
 	GPIO.output(LedPin, GPIO.LOW)
